@@ -1,0 +1,483 @@
+/* RESPONSIV */
+
+  /* Responsiv til stor skærme */
+  @media (min-width: 1200px) {
+  }
+
+  /* responsiv */
+  @media (min-width: 1024px) and (max-width: 1440px) {
+  } 
+
+/* FONT FOR HELE SITET */
+  @font-face {
+    font-family: 'AtB2-Regular.otf';
+    src: url(/Users/rsbmn/Library/Fonts/AtB2-Regular.otf) format(AtB2-Regular); 
+    font-family: 'AtB2-Italic.otf';
+    src: url(/Users/rsbmn/Desktop/AtB2-Italic.otf) format(AtB2-Italic);
+    font-family: 'AtB2-Medium.otf';
+    src: url(/Users/rsbmn/Desktop/AtB2-Medium.otf) format(AtB2-Medium);
+    font-family: 'AtB2-Bold.otf';
+    src: url(/Users/rsbmn/Desktop/AtB2-Bold.otf) format(AtB2-Bold);
+  }
+
+/* HEADER, MAIN, FOOTER */
+  header {
+    background-color: rgb(29, 62, 131);
+    font-family: 'AtB2-Regular.otf', sans-serif;
+    color: white;
+    padding: 10px 0;
+    height: 75px;
+  }    
+
+  body {
+    font-family: 'AtB2-Regular.otf', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  main {
+    font-family: 'AtB2-Regular.otf', sans-serif;
+    background-color: white;
+    padding: 98px;
+    display: flex;
+    justify-content: center;
+  }
+
+  section {
+    display: grid;
+    justify-content: center;
+    padding: 25px;
+}
+
+  footer {
+    background-color:  rgb(29, 62, 131);
+    font-family: 'AtB2-Regular.otf', sans-serif;
+    font-size: xx-small;
+    color: white;
+    padding: 10px 0;
+    height: 55px;
+    text-align: center;
+  }
+
+  /* breadcrumb sti */
+
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin: 20px;
+    margin-left: 135px;
+  }
+  
+  .breadcrumb a {
+    color: rgb(29, 62, 131);
+    text-decoration: none;
+  }
+  
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+  
+  .breadcrumb-separator {
+    margin: 0 8px;
+    color: rgb(29, 62, 131);
+  }
+  
+  .breadcrumb span {
+    color: rgb(29, 62, 131);
+  }
+
+/* LOGIN */
+
+  /* login boks + tekst der ændres */
+  .container-login {
+    width: 650px;
+    padding: 50px;
+    background-color: rgb(249, 239, 225); 
+    border-radius: 2px;
+    border: 1px solid black;
+  }
+
+  .login-box form label { /* de små guide sætninger */
+    display: block;
+    margin-bottom: 8px;
+    font-size: small;
+  }
+  
+  .login-box form input { /* boksene til at udfylde */
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid black;
+    border-radius: 2px;
+  }
+  
+  a {
+  text-decoration: none;
+  color: white;
+  }
+
+  .login-box form button { /* log ind knap */
+    width: 80px;
+    padding: 10px;
+    background-color:  rgb(29, 62, 131);
+    border: 0,5px;
+    border-color: white;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
+  .loginmessage { /* beskeden der kommer ved login */
+  color: black
+  }
+
+  .changingtext { /* teksten der ændres 7 dage om ugen */
+    font-size: x-large;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+  }
+
+  .eye { /* disse næste 3 er hjælpe sætningerne nederst i højre hjørne i login boksen */
+    width: 18px;
+    height: 18px;
+  }
+
+  .toggle-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 5px;
+    font-size: xx-small;
+    margin-left: 568px;
+  }
+
+  .glemt {
+    text-decoration: underline;
+    font-size: xx-small;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+
+  /* transport img og prikker */
+  .transport { /* selve billedet af transporten på login siden */
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    display: flex;
+    justify-content: left;
+    left: 0px; 
+    margin-top: 475px;
+    animation: rollAcross 20s linear infinite;
+  }
+
+  @keyframes rollAcross { /* transport bevægelsen */
+    0% {
+      left: 0px; /* hvor den starter */
+    }
+    100% {
+      left: 100vw; /* hvor den slutter */
+    }
+  }
+
+  .dot-container { /* prikkerne nederst på login siden */
+    display: flex;
+    align-items: center;
+    padding: 2px;
+  }
+  
+  .dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    margin: 0 5px;
+  }
+  
+  .blue {
+    background-color: rgb(29, 62, 131);
+  }
+  
+  .red-double-border { 
+    background-color: red;
+    border: 2px solid white;
+    border: 2px solid rgb(29, 62, 131);
+  }
+
+/* LOGO, MENU, PROFIL I HEADER FOR ALLE UNDERSIDER */
+  .header-container { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .logo img { /* logo i headeren */
+    height: 50px;
+  }
+  
+  .navmenu { /* menuen i headeren */
+    list-style-type: none;
+    margin-left: 35px;
+    margin-top: 45px;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 25px;
+    font-weight: 600;
+  }
+
+  .navmenu li {
+    margin: 0;
+  }
+  
+  .navmenu li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+
+  .navmenu a:hover { /* stregen under menuen */
+    text-decoration: underline;
+  }
+  
+  .navmenu li a.active {
+    border-radius: 5px;
+    background-color: white
+  }
+  
+  .profil img { /* profil billedet i headeren */
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    display: block;
+    justify-content: right;
+    align-items: center;
+    margin-left: 500px;
+  }
+
+  .sprog img { /* flag */
+    height: 50px;
+    width: 50px;
+  }
+
+/* SØG SIDE */
+
+  /* selve søge funktionen */
+  .container-søg { /* selve søge boksen */
+    width: 1155px;
+    padding: 20px;
+    border-radius: 2px;
+    border: 1px solid black;
+    background-color: white
+  }
+
+  .container-overskrift { /* overskrifts boksen inde i søge boksen */
+    color: white;
+    background-color: rgb(35, 146, 215);
+    padding: 20px;
+  }
+
+  .container-indhold { /* søge felternes position */
+    display: flex;
+    gap: 100px;
+  }
+
+  .container-søg form select { /* status vælge boks */
+    width: 125px;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid black;
+    border-radius: 2px;
+  }
+
+  .container-søg form label { /* titler */
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .container-søg form input { /* dato og navn */
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid black;
+    border-radius: 2px;
+  }
+  
+  .container-søg form button { /* knappen til at få søge resultatet frem */
+    width: 80px;
+    padding: 10px;
+    background-color:  rgb(29, 62, 131);
+    color: white;
+    border: 1px solid white;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
+  .info { /* ikon og popup tekst */
+    width: 18px;
+    height: 18px;
+  }
+
+  .info-container {
+    position: relative;
+  }
+  
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .popup-content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  /* søge resultater */
+  .container-søgeresultater { /* selve boksen til resulatater */
+    height: 455px;
+    width: 885px;
+    padding: 20px;
+    border-radius: 2px;
+    border: 1px solid black;
+    background-color: white;
+    margin-top: 0px;
+  }
+
+  .container-ordrer { /* overskrift */
+    border-bottom: 1px solid black;
+    width: 885px;
+    color: black
+  }
+
+  .container-titler { /* undertitler */
+    border-bottom: 1px solid black;
+    font-weight: normal;
+    gap: 130px;
+    display: flex;
+    background-color: white;
+  }
+
+  .container-result {
+    border-radius: 2px;
+  }
+
+  .container-result p:nth-child(odd) { /* resultaterne hver anden linje skifter farve */
+    background-color: rgb(249, 239, 225); 
+    display: flex;
+    justify-content: left;
+    margin-left: -75px;
+  }
+  
+  .container-result p:nth-child(even) {
+    background-color: white;
+    display: flex;
+    justify-content: left;
+    margin-left: -75px;
+  }
+
+  /* nav 11.11.11 */  
+  .container-nav { /* selve boksen i siden med ekstra info */
+    margin-left: 926px;
+    margin-block-start: -497px;
+    max-width: 235px;
+    padding: 20px;
+    border-radius: 2px;
+    border: 1px solid black;
+    background-color: white;
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .pilned { /* ikon pil ned */
+    width: 18px;
+    height: 18px;
+  }
+
+/* PROFIL */
+  .profil-container { /* boksen med profilen indeni */
+    background-color: white;
+    width: 45%;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .profil-header {
+    padding: 20px;
+    color: white;
+    background-color: rgb(137, 87, 137)
+  }
+
+  .profil-billede { /* profil billede */
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+  }
+  
+  .profil-navn { /* profilens tekst */
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .profil-titel {
+    margin: 0;
+    font-size: 16px;
+    color: white;
+  }
+  
+  .profil-content {
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .profil-content h4 {
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .profil-content p {
+    margin: 10px 0;
+  }
+  
+  .profil-content a {
+    text-decoration: none;
+    color: black
+  }
+  
+  .profil-content a:hover {
+    text-decoration: underline;
+  }

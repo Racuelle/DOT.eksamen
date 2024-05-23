@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    <title>Søg</title>
+</head>
+
+<!--HEADER MED LOGO, MENU OG PROFIL-->
+<body>
+    <header> 
+        <div class="header-container">
+            <div class="logo">
+                <img src="img/logo.png" alt="logo"> <!--logo i header (DOT)-->
+            </div>
+            <nav>
+              <ul class="navmenu"> <!--menu i header-->
+                <li><a href="søg.html" class="">Søg</a></li>
+                <li><a href="information.html" class="">Information</a></li>
+                <li><a href="kunder.html" class="">Kunder</a></li>
+              </ul>
+            </nav>
+            <div class="profil"> <!--profil i headeren-->
+                <a href="profil.html"><img src="img/profil.jpeg" alt="profil"></a>
+            </div> 
+            <div class="sprog"> <!--flag i headeren-->
+                <a href="english.html"><img src="img/dansk.png" alt="sprog" id="sprog"></a>
+            </div>   
+        </div>   
+        
+        <nav class="breadcrumb"> <!--breadcrumb under headeren-->
+            <a href="index.html">Log ind</a>
+            <span class="breadcrumb-separator">></span>
+            <a href="søg.html">Søg</a>
+        </nav>
+    </header>
+
+<!--SØGE FELTERNE-->
+    <main> 
+      <section>
+        <div class="container-søg" id="container-søg"> <!--søge felterne-->
+            <form onsubmit="search(event)">
+                <h2 class="container-overskrift" >Søg efter ordrer</h2>
+                <div class="container-indhold">
+                    <div>
+                        <label for="status">Status</label> <!--første med valgmuligheder-->
+                        <select id="allSelect">
+                            <option value="Alle">Alle</option>
+                            <option value="Navn">Navn</option>
+                            <option value="Dato">Dato</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="dateInput">Fra</label> <!--dato-->
+                        <input type="date" id="dateInputFrom" placeholder="11.11.11">
+                    </div>
+                    <div>
+                        <label for="dateInput">Til</label> <!--dato-->
+                        <input type="date" id="dateInputTill" placeholder="11.11.11">
+                    </div>
+                    <div>
+                        <label for="nameInput">Navn</label> <!--søg på navn-->
+                        <input type="text" id="nameInput" placeholder="Skriv navn">
+                    </div>
+                    <div>
+                    <div type="popup" id="info-container"> <!--ikon med popup tekst (virker ikke)-->
+                        <img src="img/ikoninfo.png" alt="Ikon Info" class="info" id="ikonInfo">
+                    </div>
+                    <div id="popup" class="popup">
+                        <div class="popup-content"> 
+                            <span id="close-popup" class="close">&times;</span>
+                            <p>For at udnytte søge funktionen bedst</p>
+                            <p>muligt, anbefaler vi at udfylde alle</p>
+                            <p>søge felterne.</p>
+                        </div> 
+                    </div>
+                    <button type="submit" class="submit" id="submit">Søg</button> <!--knappen-->
+                    </div>
+                </div>    
+            </form>  
+        </div>
+
+<!--SØGE RESULTATERNE-->
+        <div class="container-søgeresultater"> <!--overskrift og underoverskrifter-->
+            <div class="container-ordrer">
+                <h2>Ordrer</h2>
+            </div>
+            <div class="container-titler">
+                <p>Ordrer nr.</p>
+                <p>Status</p>
+                <p>Kunde</p>
+                <p>Ordrer dato</p>
+                <p>Total</p>
+            </div>
+
+            <ul class="container-result" id="resultList"> <!--resultatter efter søgning-->
+                <p></p>
+                <div id="searchResult"></div>
+              </ul>
+        </div>  
+    
+        <div class="container-nav" id="container-nav"> <!--sidebar med ekstra info på kunder og ordrer-->
+            <form onsubmit="search(event)">
+                    <h3>Nav 11.11.11</h3>  
+                <div class="navigation">
+                    <p>Person oplysning</p>
+                    <img src="img/pilned.png" alt="pilned" class="pilned">
+                </div>
+                <div class="navigation">
+                    <p>Betalingsoplysning</p>
+                    <img src="img/pilned.png" alt="pilned" class="pilned">
+                </div>
+                <div class="navigation">
+                    <p>Produkt oplysninger</p>
+                    <img src="img/pilned.png" alt="pilned" class="pilned">
+                </div>
+                <div class="navigation">
+                    <p>Ordrer oplysninger</p>
+                    <img src="img/pilned.png" alt="pilned" class="pilned">
+               </div>
+            </form>  
+        </div> 
+      </section>        
+    </main>       
+</body>
+
+<!--FOOTER MED TEKST-->
+<footer>
+    <h3>© 2024 DOT. Alle rettigheder er reserveret.</h3>
+</footer>
+
+</html>

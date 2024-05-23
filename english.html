@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    <title>Search</title>
+</head>
+
+<!--HEADER MED LOGO, MENU OG PROFIL-->
+<body>
+    <header> 
+        <div class="header-container">
+            <div class="logo">
+                <img src="img/logo.png" alt="logo">
+            </div>
+            <nav>
+              <ul class="navmenu">
+                <li><a href="søg.html" class="">Search</a></li>
+                <li><a href="information.html" class="">Information</a></li>
+                <li><a href="kunder.html" class="">Costumer</a></li>
+              </ul>
+            </nav>
+            <div class="profil">
+                <a href="profil.html"><img src="img/profil.jpeg" alt="profil"></a>
+            </div> 
+            <div class="sprog">
+                <a href="english.html"><img src="img/engelsk.png" alt="sprog" id="sprog"></a>
+            </div>   
+        </div>   
+        
+        <nav class="breadcrumb">
+            <a href="index.html">Login</a>
+            <span class="breadcrumb-separator">></span>
+            <a href="søg.html">Search</a>
+        </nav>
+    </header>
+
+<!--SØGE FELTERNE-->
+    <main> 
+      <section>
+        <div class="container-søg" id="container-søg">
+            <form onsubmit="search(event)">
+                <h2 class="container-overskrift" >Search after orders</h2>
+                <div class="container-indhold">
+                    <div>
+                        <label for="status">Status</label>
+                        <select id="allSelect">
+                            <option value="Alle">All</option>
+                            <option value="Navn">Name</option>
+                            <option value="Dato">Date</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="dateInput">From</label>
+                        <input type="date" id="dateInputFrom" placeholder="11.11.11">
+                    </div>
+                    <div>
+                        <label for="dateInput">Till</label>
+                        <input type="date" id="dateInputTill" placeholder="11.11.11">
+                    </div>
+                    <div>
+                        <label for="nameInput">Name</label>
+                        <input type="text" id="nameInput" placeholder="Skriv navn">
+                    </div>
+                    <div>
+                    <div type="popup" id="info-container">
+                        <img src="img/ikoninfo.png" alt="Ikon Info" class="info" id="ikonInfo">
+                    </div>
+                    <div id="popup" class="popup">
+                        <div class="popup-content"> 
+                            <span id="close-popup" class="close">&times;</span>
+                            <p>For best outcome</p>
+                            <p>we recommend that you fill</p>
+                            <p>in all of the fields.</p>
+                        </div> 
+                    </div>
+                    <button type="submit" class="submit" id="submit">Search</button>
+                    </div>
+                </div>    
+            </form>  
+        </div>
+
+<!--sSØGE RESULTATERNE-->
+        <div class="container-søgeresultater">
+            <div class="container-ordrer">
+                <h2>Orders</h2>
+            </div>
+            <div class="container-titler">
+                <p>Order nr.</p>
+                <p>Status</p>
+                <p>Costumer</p>
+                <p>Order date</p>
+                <p>Total</p>
+            </div>
+
+            <ul class="container-result" id="resultList">
+                <p></p>
+                <div id="searchResult"></div>
+              </ul>
+        </div>  
+    
+        <div class="container-nav" id="container-nav">
+            <form onsubmit="search(event)">
+                    <h3>Nav 11.11.11</h3>  
+                <div class="navigation">
+                    <p>Personal information</p>
+                    <img src="img/pilned.png" alt="pilned" class="pilned">
+                </div>
+                <div class="navigation">
+                    <p>Payment information</p>
+                    <img src="img/pilned.png" alt="pilned" class="pilned">
+                </div>
+                <div class="navigation">
+                    <p>Product information</p>
+                    <img src="img/pilned.png" alt="pilned" class="pilned">
+                </div>
+                <div class="navigation">
+                    <p>Order information</p>
+                    <img src="img/pilned.png" alt="pilned" class="pilned">
+               </div>
+            </form>  
+        </div> 
+      </section>        
+    </main>    
+        
+</body>
+
+<!--FOOTER MED TEKST-->
+<footer>
+    <h3>© 2024 DOT. All rights are reserved.</h3>
+</footer>
+
+</html>
